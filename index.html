@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cat and Dog Classifier</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Cat and Dog Classifier</h1>
+
+    <!-- Tab Buttons -->
+    <div class="tabs">
+        <div class="tab-buttons">
+            <button onclick="showTab('upload-tab')">Classifier</button>
+            <button onclick="showTab('result-tab')">Result</button>
+        </div>
+    </div>
+
+    <!-- Classifier Tab -->
+    <div id="upload-tab" class="tab active">
+        <form id="upload-form" action="/predict" method="post" enctype="multipart/form-data">
+            <h2>Upload an Image</h2>
+            <input type="file" name="file" required>
+            <select name="model">
+                <option value="SVM">SVM</option>
+                <option value="Random Forest">Random Forest</option>
+                <option value="Logistic Regression">Logistic Regression</option>
+                <option value="CNN">CNN</option>
+            </select>
+            <button type="submit">Classify</button>
+            <button type="button" onclick="insertImage()">Insert</button>
+            <button type="reset">Refresh</button>
+        </form>
+    </div>
+
+    <!-- Result Tab -->
+    <div id="result-tab" class="tab">
+        <h2>Classification Result</h2>
+        <div id="result-content">
+            <p>Upload an image and classify it to see the results here.</p>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
