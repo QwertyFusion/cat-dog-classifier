@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat & Dog Classifier</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header class="banner">
+        <h1>Welcome to the Cat & Dog Classifier</h1>
+    </header>
+
+    <div class="container">
+        <h1>Cat & Dog Classifier</h1>
+        <form id="upload-form" action="/upload" method="post" enctype="multipart/form-data">
+            <label for="image-upload" class="upload-label">Upload an Image:</label>
+            <input type="file" id="image-upload" name="image" accept="image/*" required>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+
+        <div id="results" class="results" style="display: none;">
+            <h2>Prediction Results</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Model</th>
+                        <th>Prediction</th>
+                        <th>Confidence</th>
+                    </tr>
+                </thead>
+                <tbody id="results-table-body">
+                    <!-- Results will be dynamically injected here -->
+                </tbody>
+            </table>
+            <div id="overview" class="overview">
+                <h3>Overall Summary</h3>
+                <p id="summary-text"><!-- Summary will be dynamically injected here --></p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="banner">
+        <p>&copy; 2025 Cat & Dog Classifier. All rights reserved.</p>
+    </footer>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
