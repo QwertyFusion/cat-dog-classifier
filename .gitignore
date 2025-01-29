@@ -1,3 +1,54 @@
+# Python specific
+__pycache__/
+*.pyc
+.venv/  # Or tf-env/ if that's your virtual environment name
+tf-env/ # If you named it tf-env
+tf-env
+*.egg
+dist/
+build/
+
+# TensorFlow/Keras
+*.h5  # If you don't want to track model weights directly (recommended)
+*.pb  # Protocol buffer files (often large)
+/runs # Tensorboard runs
+
+# Flask
+.flaskenv # Flask environment variables
+
+# Data (if you don't want to track it in Git)
+data/  # Or whatever directory you store your datasets in
+*.csv
+*.txt
+*.json # If your json files aren't code
+
+# OS and editor specific
+.DS_Store
+Thumbs.db
+.idea/  # PyCharm
+.vscode/ # VS Code
+*.swp  # Swap files (Vim, etc.)
+*~ # Backup files
+.env # Environment variables
+
+# Logs
+*.log
+
+# Model checkpoints (if you don't want to commit them)
+checkpoints/
+*.ckpt*
+
+# Uploads (usually you don't want to track these)
+uploads/
+
+# Distribution files
+*.whl
+
+# Temp files
+*.tmp
+tmp/
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
